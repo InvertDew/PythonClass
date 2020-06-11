@@ -14,6 +14,8 @@ def average(score_1, score_2, score_3):
             raise ValueError
         elif score_2 < 0:
             raise ValueError
+        elif score_3 < 0:
+            raise ValueError
     except ValueError:
         raise ValueError
         print("Invalid average score input")
