@@ -9,6 +9,13 @@ Last date modified: 6/10/2020
 
 
 def average(score_1, score_2, score_3):
+    try:
+        if score_1 < 0:
+            raise ValueError
+    except ValueError:
+        raise ValueError
+        print("Invalid average score input")
+        return
     return (score_1 + score_2 + score_3) / 3
 
 
