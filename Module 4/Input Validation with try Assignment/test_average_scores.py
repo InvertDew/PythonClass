@@ -7,6 +7,8 @@ class FunctionTestCase(unittest.TestCase):
             average(-90,80, 78)
         with self.assertRaises(ValueError):
             average(90,-80, 78)
+        with self.assertRaises(ValueError):
+            average(90, 80, -78)
 
 if __name__ == '__main__':
     test_average_exception()
