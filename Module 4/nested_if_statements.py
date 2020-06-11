@@ -19,9 +19,11 @@ def calculate_price(price, cash_coupon, percent_coupon):
         percent_coupon = 0
     else:
         percent_coupon = int(percent_coupon)
-    grand_total = price - cash_coupon
-    grand_total = grand_total - ((percent_coupon / 100) * grand_total)
-    return float("%.2f" % grand_total)
+    total = price - cash_coupon
+    total = total - ((percent_coupon / 100) * total)
+    total = total + shipping
+    total = total + (total * .06)
+    return float("%.2f" % total)
 
 
 def calculate_shipping(price):
