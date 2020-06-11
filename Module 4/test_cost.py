@@ -20,7 +20,13 @@ class FunctionTestCase(unittest.TestCase):
         self.assertTrue(30 <= calculate_price(35, 10, 15) < 50)
         self.assertTrue(30 <= calculate_price(45, 10, 20) < 50)
 
+    def test_price_under_over_fifty(self):
+        self.assertTrue(calculate_price(55, 5, 10) > 50)
+        self.assertTrue(calculate_price(70, 10, 15) > 50)
+        self.assertTrue(calculate_price(80, 10, 20) > 50)
+
 if __name__ == '__main__':
     test_price_under_ten()
     test_price_under_between_ten_thirty()
     test_price_under_between_thirty_fifty()
+    test_price_under_over_fifty()
