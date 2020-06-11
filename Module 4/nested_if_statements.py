@@ -21,7 +21,7 @@ def calculate_price(price, cash_coupon, percent_coupon):
         percent_coupon = int(percent_coupon)
     grand_total = price - cash_coupon
     grand_total = grand_total - ((percent_coupon / 100) * grand_total)
-    return "%.2f" % grand_total
+    return float("%.2f" % grand_total)
 
 
 def calculate_shipping(price):
