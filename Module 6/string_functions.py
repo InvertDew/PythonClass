@@ -9,9 +9,9 @@ Last date modified: 6/18/2020
 
 
 def multiply_string(message, n):
-    return pass
+    return message * n
 
 
 if __name__ == '__main__':
-    print("hello")
+    print(multiply_string("Hello", 3))
     time.sleep(30)
