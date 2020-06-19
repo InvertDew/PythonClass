@@ -11,7 +11,15 @@ class FunctionTestCase(unittest.TestCase):
         self.assertTrue(score_input("hello", 33) == {'hello': 33})
         self.assertTrue(score_input("fred", 77) == {'fred': 77})
 
+    def test_score_input_test_score_below_range(self):
+        self.assertTrue(score_input("hello", -55) == 'Invalid test score, try again!')
+
+    def test_score_input_test_score_above_range(self):
+        self.assertTrue(score_input("hello", 155) == 'Invalid test score, try again!')
+
         
 if __name__ == '__main__':
     test_score_input_test_name()
     test_score_input_test_score_valid()
+    test_score_input_test_score_below_range()
+    test_score_input_test_score_above_range()
