@@ -15,13 +15,16 @@ def score_input(test_name, test_score=0, invalid_message='Invalid test score, tr
     :param test_score optional invalid message
     :returns: object with test_name and test_score
     """
+    try:
+        test = int(test_score)
+    except ValueError as err:
+        return invalid_message
     if test_score < 0 or test_score > 100:
-        print(invalid_message)
         return invalid_message
     print('Test name:', test_name)
     return { test_name: test_score }
 
 
 if __name__ == '__main__':
-    print(score_input("test", -55))
+    print(score_input("test", "#%$"))
     time.sleep(30)

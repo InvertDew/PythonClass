@@ -17,9 +17,12 @@ class FunctionTestCase(unittest.TestCase):
     def test_score_input_test_score_above_range(self):
         self.assertTrue(score_input("hello", 155) == 'Invalid test score, try again!')
 
+    def test_test_score_non_numeric(self):
+        self.assertTrue(score_input("hello", "&^*D&") == 'Invalid test score, try again!')
         
 if __name__ == '__main__':
     test_score_input_test_name()
     test_score_input_test_score_valid()
     test_score_input_test_score_below_range()
     test_score_input_test_score_above_range()
+    test_test_score_non_numeric()
